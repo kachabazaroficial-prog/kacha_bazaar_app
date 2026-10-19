@@ -13,7 +13,7 @@ void main() async {
 }
 
 class KachaBazaarApp extends StatelessWidget {
-  const KachaBazaarApp({Key? key}) : super(key: key);
+  const KachaBazaarApp({super.key});
 
   @override
   Widget build(BuildContext context) {

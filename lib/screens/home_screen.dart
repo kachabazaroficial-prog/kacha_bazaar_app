@@ -6,7 +6,7 @@ import 'product_detail_screen.dart';
 import 'login_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -207,8 +207,7 @@ class CategoryCard extends StatelessWidget {
   final String title;
   final IconData icon;
 
-  const CategoryCard({Key? key, required this.title, required this.icon})
-      : super(key: key);
+  const CategoryCard({super.key, required this.title, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +217,7 @@ class CategoryCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 5,
             spreadRadius: 1,
           ),

@@ -7,11 +7,11 @@ class ProductDetailScreen extends StatelessWidget {
   final IconData productIcon;
 
   const ProductDetailScreen({
-    Key? key,
+    super.key,
     required this.productName,
     required this.productPrice,
     required this.productIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
