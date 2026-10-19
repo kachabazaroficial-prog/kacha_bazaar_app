@@ -5,9 +5,18 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   
-  NotificationService().initialize();
+  try {
+    await Firebase.initializeApp();
+  } catch (e) {
+    debugPrint("Firebase initialization error: $e");
+  }
+
+  try {
+    await NotificationService().initialize();
+  } catch (e) {
+    debugPrint("Notification service error: $e");
+  }
 
   runApp(const KachaBazaarApp());
 }
